@@ -1,18 +1,62 @@
-// IMPORT MODULES under test here:
-// import { example } from '../example.js';
+import { renderMovies } from '../render.js';
+import { movies } from '../movies.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('renderMovies needs to return an html snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
+    const expected = `<div class="movies-card"><h2>The Avengers</h2><img src="./assets/avengers.jpg"><h3>Review of movie: 5</h3><h3>Price of movie: $3</h3></div>`
+    const avengers = movies[0];
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
+    const actual = renderMovies(avengers).outerHTML;
+
     expect.equal(actual, expected);
 });
+
+test('renderMovies needs to return an html snippet', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = `<div class="movies-card"><h2>Star Wars</h2><img src="./assets/starwars.jpg"><h3>Review of movie: 2</h3><h3>Price of movie: $5</h3></div>`
+    const starwars = movies[1];
+
+    const actual = renderMovies(starwars).outerHTML;
+
+    expect.equal(actual, expected);
+});
+
+test('renderMovies needs to return an html snippet', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = `<div class="movies-card"><h2>Jurassic Park</h2><img src="./assets/jurassic.jpg"><h3>Review of movie: 4</h3><h3>Price of movie: $2</h3></div>`
+    const jurassicpark = movies[2];
+
+    const actual = renderMovies(jurassicpark).outerHTML;
+
+    expect.equal(actual, expected);
+});
+
+test('renderMovies needs to return an html snippet', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = `<div class="movies-card"><h2>Pirates of the Caribbean</h2><img src="./assets/pirates.jpg"><h3>Review of movie: 3</h3><h3>Price of movie: $6</h3></div>`
+    const pirates = movies[3];
+
+    const actual = renderMovies(pirates).outerHTML;
+
+    expect.equal(actual, expected);
+});
+
+test('renderMovies needs to return an html snippet', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = `<div class="movies-card"><h2>Avatar</h2><img src="./assets/avatar.jpg"><h3>Review of movie: 5</h3><h3>Price of movie: $7</h3></div>`
+    const avatar = movies[4];
+
+    const actual = renderMovies(avatar).outerHTML;
+
+    expect.equal(actual, expected);
+});
+
+
+

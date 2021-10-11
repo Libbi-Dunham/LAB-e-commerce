@@ -1,35 +1,35 @@
 export const movies = [
     {
         id: '1',
-        name: 'movie1',
-        img: 'picture',
+        name: 'The Avengers',
+        img: './assets/avengers.jpg',
         reviews: 5,
-        price: 6
+        price: 300
     },
     {
         id: '2',
-        name: 'movie2',
-        img: 'picture',
+        name: 'Star Wars: Episode VII-The Force Awakens',
+        img: './assets/starwars.jpg',
         reviews: 2,
-        price: 6 },
+        price: 500 },
     {
         id: '3',
-        name: 'movie3',
-        img: 'picture',
+        name: 'Jurassic Park',
+        img: './assets/jurassic.jpg',
         reviews: 4,
-        price: 6 },
+        price: 200 },
     {
         id: '4',
-        name: 'movie4',
-        img: 'picture',
+        name: 'Pirates of the Caribbean: on stranger tides ',
+        img: './assets/pirates.jpg',
         reviews: 3,
-        price: 6
+        price: 600
     },
     {
         id: '5',
-        name: 'movie5',
-        img: 'picture',
+        name: 'Avatar',
+        img: './assets/avatar.jpg',
         reviews: 5,
-        price: 6
+        price: 700
     }
 ];

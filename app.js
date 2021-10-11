@@ -1,8 +1,9 @@
-// import functions and grab DOM elements
+import { renderMovies } from './render.js';
+import { movies } from './movies.js';
 
-// initialize global state
+const productList = document.getElementById('movies-list');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+for (let movie of movies){
+  const moviesCard = renderMovies(movie);
+  productList.append(moviesCard);
+}

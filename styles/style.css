@@ -5,6 +5,8 @@
 
 #picture {
     width: 600px;
+    border: 3px solid black;
+
 }
 
 h1 {

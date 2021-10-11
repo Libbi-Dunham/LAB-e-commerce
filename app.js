@@ -4,6 +4,6 @@ import { movies } from './movies.js';
 const productList = document.getElementById('movies-list');
 
 for (let movie of movies){
-  const moviesCard = renderMovies(movie);
-  productList.append(moviesCard);
+    const moviesCard = renderMovies(movie);
+    productList.append(moviesCard);
 }

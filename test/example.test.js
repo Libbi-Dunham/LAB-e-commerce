@@ -1,5 +1,6 @@
 import { renderMovies } from '../render.js';
-import { movies } from '../movies.js';
+import { movies } from '../data/movies.js';
+import { findById } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -57,6 +58,20 @@ test('renderMovies needs to return an html snippet', (expect) => {
 
     expect.equal(actual, expected);
 });
+
+test('findById should return the item matching the ID', (expect) =>{
+    const expected = {
+        id: '1',
+        name: 'The Avengers',
+        img: './assets/avengers.jpg',
+        reviews: 5,
+        price: 3.00
+    };
+
+    const actual = findById('1', movies);
+    expect.deepEqual(actual, expected);
+});
+
 
 
 

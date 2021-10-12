@@ -1,21 +1,14 @@
 import { movies } from '../data/movies.js';
 import { cart } from '../data/cart-data.js';
-import { findById } from '../utils.js';
+import { calculatorOrderTotal, findById } from '../utils.js';
+import { renderLineItems } from '../render-line-items.js';
 
 const tbody = document.getElementById('table-body');
 for (let cartItem of cart){
     const moviesData = findById(cartItem.id, movies);
-
-    const tr = document.createElement('tr');
-    const tdName = document.createElement('td');
-    tdName.textContent = moviesData.name;
-    const tdPrice = document.createElement('td');
-    tdPrice.textContent = moviesData.price;
-    const tdQty = document.createElement('td');
-    tdQty.textContent = cartItem.qty;
-    const tdTotal = document.createElement('td');
-    tdTotal.textContent = cartItem.qty * moviesData.price;
-
-    tr.append(tdName, tdPrice, tdQty, tdTotal);
+    const tr = renderLineItems(cartItem, moviesData);
     tbody.appendChild(tr);
 }
+const orderTotal = calculatorOrderTotal(cart, movies);
+const tdOrdertotal = document.getElementById('total');
+tdOrdertotal.textContent = (orderTotal);

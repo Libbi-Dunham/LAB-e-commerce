@@ -7,9 +7,6 @@ export function findById(id, items){
 }
 
 export function calculatorOrderTotal(cart, movies) {
-
-
-
     let orderTotal = 0;
     for (let item of cart){
         const movie = findById(item.id, movies);

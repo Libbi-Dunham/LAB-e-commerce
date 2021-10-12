@@ -13,5 +13,4 @@ export function renderLineItems(cartItem, moviesData) {
     tr.append(tdName, tdPrice, tdQty, tdTotal);
 
     return tr;
-
 }

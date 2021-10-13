@@ -13,3 +13,9 @@ for (let cartItem of cart){
 const orderTotal = calculatorOrderTotal(cart, movies);
 const tdOrdertotal = document.getElementById('total');
 tdOrdertotal.textContent = (orderTotal);
+
+const watchButton = document.getElementById('watch-button');
+watchButton.addEventListener('click', ()=>{
+    localStorage.removeItem('CART');
+    window.location.replace('..');
+});

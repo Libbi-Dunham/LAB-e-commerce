@@ -14,3 +14,22 @@ export function calculatorOrderTotal(cart, movies) {
     }
     return orderTotal;
 }
+
+export function getCart(){
+    const cartString = localStorage.getItem('CART') || '[]';
+    const cart = JSON.parse(cartString);
+    return cart; 
+}
+
+export function addItem(id){
+    const cart = getCart();
+    const cartItem = findById(id, cart);
+    if (cartItem){
+        cartItem.qty++;
+    } else {
+        const newItem = { id: id, qty: 1 };
+        cart.push(newItem);
+    }
+    const stringCart = JSON.stringify(cart);
+    localStorage.setItem('CART', stringCart);
+}

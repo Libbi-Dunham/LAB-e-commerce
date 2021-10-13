@@ -1,6 +1,6 @@
 import { renderMovies } from '../render.js';
 import { movies } from '../data/movies.js';
-import { findById } from '../utils.js';
+import { findById, addItem, getCart } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -70,6 +70,46 @@ test('findById should return the item matching the ID', (expect) =>{
 
     const actual = findById('1', movies);
     expect.deepEqual(actual, expected);
+});
+
+test('getCart should return the cart if it exisits', (expect)=>{
+    const fakeCart = [
+        { id: '1', qty: 2 },
+        { id: '2', qty: 3 }
+    ];
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+    const cart = getCart();
+    expect.deepEqual(cart, fakeCart);
+});
+
+test('getCart should return an empty array if the cart does not exist', (expect)=>{
+    localStorage.removeItem('CART');
+    const cart = getCart();
+    expect.deepEqual(cart, []);
+
+});
+
+test('addItem should add the quantity if the item in cart', (expect)=>{
+    const fakeCart = [
+        { id: '1', qty: 2 },
+        { id: '2', qty: 3 }
+    ];
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+    addItem('1');
+    const cart = getCart();
+    const expected = [
+        { id: '1', qty: 3 },
+        { id: '2', qty: 3 }
+    ];
+    expect.deepEqual(cart, expected);
+});
+
+test('addItem should add an item if its not already there', (expect) =>{
+    localStorage.removeItem('CART');
+    const expected = [{ id: '1', qty: 1 }];
+    addItem('1');
+    const cart = getCart();
+    expect.deepEqual(cart, expected);
 });
 
 

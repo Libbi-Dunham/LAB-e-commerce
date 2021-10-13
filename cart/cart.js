@@ -1,7 +1,8 @@
 import { movies } from '../data/movies.js';
-import { cart } from '../data/cart-data.js';
-import { calculatorOrderTotal, findById } from '../utils.js';
+import { calculatorOrderTotal, findById, getCart } from '../utils.js';
 import { renderLineItems } from '../render-line-items.js';
+
+const cart = getCart();
 
 const tbody = document.getElementById('table-body');
 for (let cartItem of cart){

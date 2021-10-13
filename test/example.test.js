@@ -7,7 +7,7 @@ const test = QUnit.test;
 test('renderMovies needs to return an html snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div class="movies-card"><h2>The Avengers</h2><img src="../assets/avengers.jpg"><h3>Review of movie: 5</h3><h3>Price of movie: $3</h3></div>`;
+    const expected = `<div class="movies-card"><h2>The Avengers</h2><img src="../assets/avengers.jpg"><h3>Review of movie: 5</h3><h3>Price of movie: $3</h3><button id="1" class="rent-button">Rent</button></div>`;
     const avengers = movies[0];
 
     const actual = renderMovies(avengers).outerHTML;
@@ -18,7 +18,7 @@ test('renderMovies needs to return an html snippet', (expect) => {
 test('renderMovies needs to return an html snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div class="movies-card"><h2>Star Wars</h2><img src="../assets/starwars.jpg"><h3>Review of movie: 2</h3><h3>Price of movie: $5</h3></div>`;
+    const expected = `<div class="movies-card"><h2>Star Wars</h2><img src="../assets/starwars.jpg"><h3>Review of movie: 2</h3><h3>Price of movie: $5</h3><button id="2" class="rent-button">Rent</button></div>`;
     const starwars = movies[1];
 
     const actual = renderMovies(starwars).outerHTML;
@@ -29,7 +29,7 @@ test('renderMovies needs to return an html snippet', (expect) => {
 test('renderMovies needs to return an html snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div class="movies-card"><h2>Jurassic Park</h2><img src="../assets/jurassic.jpg"><h3>Review of movie: 4</h3><h3>Price of movie: $2</h3></div>`;
+    const expected = `<div class="movies-card"><h2>Jurassic Park</h2><img src="../assets/jurassic.jpg"><h3>Review of movie: 4</h3><h3>Price of movie: $2</h3><button id="3" class="rent-button">Rent</button></div>`;
     const jurassicpark = movies[2];
 
     const actual = renderMovies(jurassicpark).outerHTML;
@@ -40,7 +40,7 @@ test('renderMovies needs to return an html snippet', (expect) => {
 test('renderMovies needs to return an html snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div class="movies-card"><h2>Pirates of the Caribbean</h2><img src="../assets/pirates.jpg"><h3>Review of movie: 3</h3><h3>Price of movie: $6</h3></div>`;
+    const expected = `<div class="movies-card"><h2>Pirates of the Caribbean</h2><img src="../assets/pirates.jpg"><h3>Review of movie: 3</h3><h3>Price of movie: $6</h3><button id="4" class="rent-button">Rent</button></div>`;
     const pirates = movies[3];
 
     const actual = renderMovies(pirates).outerHTML;
@@ -51,7 +51,7 @@ test('renderMovies needs to return an html snippet', (expect) => {
 test('renderMovies needs to return an html snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div class="movies-card"><h2>Avatar</h2><img src="../assets/avatar.jpg"><h3>Review of movie: 5</h3><h3>Price of movie: $7</h3></div>`;
+    const expected = `<div class="movies-card"><h2>Avatar</h2><img src="../assets/avatar.jpg"><h3>Review of movie: 5</h3><h3>Price of movie: $7</h3><button id="5" class="rent-button">Rent</button></div>`;
     const avatar = movies[4];
 
     const actual = renderMovies(avatar).outerHTML;

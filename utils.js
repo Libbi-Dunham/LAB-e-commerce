@@ -23,6 +23,7 @@ export function getCart(){
 
 export function addItem(id){
     const cart = getCart();
+    console.log(cart);
     const cartItem = findById(id, cart);
     if (cartItem){
         cartItem.qty++;

@@ -42,3 +42,19 @@ body {
     align-items: center;
     background-color: rgb(33, 33, 167);
 }
+
+a:visited {
+    color: black;
+}
+
+a:link {
+    color: black;
+}
+
+a:hover {
+    background-color: #ddc673;
+}
+
+.rent-button {
+    font-family: 'Notable', sans-serif;
+}

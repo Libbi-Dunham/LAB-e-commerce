@@ -11,9 +11,14 @@ export function renderMovies(movies){
     const moviesPrice = document.createElement('h3');
     moviesPrice.textContent = `Price of movie: $${movies.price}`;
 
+    const rentButton = document.createElement('button');
+    rentButton.textContent = 'Rent';
+    rentButton.id = movies.id;
+    rentButton.classList.add('rent-button');
+
     const img = document.createElement('img');
     img.src = movies.img;
 
-    moviesCard.append(moviesHeader, img, moviesReviews, moviesPrice);
+    moviesCard.append(moviesHeader, img, moviesReviews, moviesPrice, rentButton);
     return moviesCard;
 }

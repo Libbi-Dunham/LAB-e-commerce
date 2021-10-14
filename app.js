@@ -1,5 +1,5 @@
 import { renderMovies } from './render.js';
-import { movies } from '../data/movies.js';
+import { movies } from './data/movies.js';
 import { addItem } from './utils.js';
 
 const productList = document.getElementById('movies-list');

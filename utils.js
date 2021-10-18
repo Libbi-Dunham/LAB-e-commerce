@@ -34,3 +34,17 @@ export function addItem(id){
     const stringCart = JSON.stringify(cart);
     localStorage.setItem('CART', stringCart);
 }
+
+import { movies } from './data/movies.js';
+
+
+export function getProducts(){
+    let lsProducts = localStorage.getItem('PRODUCTS');
+    const products = JSON.parse(lsProducts);
+
+    if (!products){
+        const moviesString = JSON.stringify(movies);
+        localStorage.setItem('PRODUCTS', moviesString);
+    }
+    return products || movies;
+}

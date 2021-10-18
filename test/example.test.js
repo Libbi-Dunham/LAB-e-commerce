@@ -112,7 +112,7 @@ test('addItem should add an item if its not already there', (expect) =>{
     expect.deepEqual(cart, expected);
 });
 
-test('the addProduct should ass a product to the products array', (expect)=>{
+test('the addProduct should add a product to the products array', (expect)=>{
 
     let products = getProducts();
     const newProduct = {

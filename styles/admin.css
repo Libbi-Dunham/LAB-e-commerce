@@ -10,18 +10,33 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: black;
     
 }
 
 h1 {
     font-family: 'Notable', sans-serif;
+    color: rgb(33, 33, 167);
 }
 
 label {
     margin: 10px;
+    color: white;
 }
 
 button {
     width: 50%;
     margin-left: 40px;
+}
+
+a:link {
+    color: #ddc673;
+}
+
+a:visited {
+    color: #ddc673;
+}
+
+a:hover {
+    background-color: rgb(238, 232, 232);
 }

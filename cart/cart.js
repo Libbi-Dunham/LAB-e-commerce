@@ -1,4 +1,4 @@
-import { movies } from '../data/movies.js';
+// import { movies } from '../data/movies.js';
 import { calculatorOrderTotal, findById, getCart, getProducts } from '../utils.js';
 import { renderLineItems } from '../render-line-items.js';
 

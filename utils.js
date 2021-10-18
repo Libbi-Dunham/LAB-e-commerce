@@ -48,3 +48,14 @@ export function getProducts(){
     }
     return products || movies;
 }
+
+export function addProduct(newMovies){
+    let products = getProducts();
+    console.log('PRODUCTS BEFORE', products);
+
+    products.push(newMovies);
+    console.log('PRODUCTS AFTER', products);
+
+    let productsString = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', productsString);
+}

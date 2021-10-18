@@ -1,6 +1,6 @@
 import { renderMovies } from '../render.js';
 import { movies } from '../data/movies.js';
-import { findById, addItem, getCart } from '../utils.js';
+import { findById, addItem, getCart, getProducts, addProduct } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -110,6 +110,23 @@ test('addItem should add an item if its not already there', (expect) =>{
     addItem('1');
     const cart = getCart();
     expect.deepEqual(cart, expected);
+});
+
+test('the addProduct should ass a product to the products array', (expect)=>{
+
+    let products = getProducts();
+    const newProduct = {
+        id: '6',
+        name: 'Transformers',
+        img: './assets/transformers.jpg',
+        reviews: 5,
+        price: 8.00
+    };
+
+    addProduct(newProduct);
+
+    products = getProducts();
+    expect.equal(products.length, 6);
 });
 
 

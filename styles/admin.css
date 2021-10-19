@@ -25,8 +25,9 @@ label {
 }
 
 button {
-    width: 50%;
     margin-left: 40px;
+    font-family: 'Notable', sans-serif;
+
 }
 
 a:link {

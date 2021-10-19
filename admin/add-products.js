@@ -16,4 +16,6 @@ form.addEventListener('submit', (e) =>{
     console.log(newMovies);
     addProduct(newMovies);
     alert('Movie Rented!');
+    form.reset();
+
 });

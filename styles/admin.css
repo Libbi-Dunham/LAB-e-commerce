@@ -1,0 +1,43 @@
+#product-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    
+}
+
+h1 {
+    font-family: 'Notable', sans-serif;
+    color: rgb(33, 33, 167);
+}
+
+label {
+    margin: 10px;
+    color: white;
+}
+
+button {
+    margin-left: 40px;
+    font-family: 'Notable', sans-serif;
+
+}
+
+a:link {
+    color: #ddc673;
+}
+
+a:visited {
+    color: #ddc673;
+}
+
+a:hover {
+    background-color: rgb(238, 232, 232);
+}

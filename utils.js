@@ -34,3 +34,28 @@ export function addItem(id){
     const stringCart = JSON.stringify(cart);
     localStorage.setItem('CART', stringCart);
 }
+
+import { movies } from './data/movies.js';
+
+
+export function getProducts(){
+    let lsProducts = localStorage.getItem('PRODUCTS');
+    const products = JSON.parse(lsProducts);
+
+    if (!products){
+        const moviesString = JSON.stringify(movies);
+        localStorage.setItem('PRODUCTS', moviesString);
+    }
+    return products || movies;
+}
+
+export function addProduct(newMovies){
+    let products = getProducts();
+    console.log('PRODUCTS BEFORE', products);
+
+    products.push(newMovies);
+    console.log('PRODUCTS AFTER', products);
+
+    let productsString = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', productsString);
+}
